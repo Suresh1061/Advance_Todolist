@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Belanosima&family=Concert+One&family=Dancing+Script:wght@400;500;600;700&family=Kalam&family=Merriweather:ital,wght@1,400;1,700&family=Mulish&family=PT+Serif:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: rgb(144, 34, 195);
+  background: linear-gradient(
+    128deg,
+    rgba(144, 34, 195, 1) 0%,
+    rgba(71, 91, 244, 1) 100%
+  );
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container:hover .deleteIcon {
+  color: red;
+}
+
+.container:hover .editIcon {
+  color: green;
+}
