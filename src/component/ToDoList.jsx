@@ -73,6 +73,12 @@ const ToDoList = () => {
         message.success("All items deleted")
     }
 
+        const handlerKeyDown = (e) => {
+            if (e.key === "Enter") {
+            AddItems();
+          }
+        };
+
     // Items add to the Loacal Storage
 
     useEffect(() => {
@@ -87,7 +93,9 @@ const ToDoList = () => {
                     type="text"
                     placeholder='Add your list here'
                     value={inputItem}
-                    onChange={InputItemValue} />
+                    onChange={InputItemValue}
+                    onKeyDown={handlerKeyDown}
+                />
                 <div className=' absolute top-2 right-3 text-red-900'>
                     {
                         (toggleEditbtn) ? <MdOutlineAdd className=' cursor-pointer hover:text-green-600' size={25} fontWeight='bold' onClick={AddItems} /> : <FiEdit className=' text-green-600 cursor-pointer mt-[2px] pr-1' size={20} onClick={AddItems} />
