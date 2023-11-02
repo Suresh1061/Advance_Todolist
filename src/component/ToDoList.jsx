@@ -107,7 +107,7 @@ const ToDoList = () => {
                     return (
                         <ul className='w-full p-2 bg-violet-900 text-white rounded-lg relative my-2 cursor-pointer overflow-hidden hover:bg-white  hover:text-violet-900 duration-300 container '>
                             <li className=' font-semibold flex items-center justify-between font-sans'>
-                                <p className=' w-60 overflow-scroll pl-2'>{data.name}</p>
+                                <p className=' w-60 overflow-scroll pl-2 capitalize'>{data.name}</p>
                                 <div className='flex gap-4  pr-2'>
                                     <FiEdit className='editIcon' size={18} onClick={() => EditItems(data.id)} />
                                     <RiDeleteBin6Line className='deleteIcon' size={18} fontWeight='bold' onClick={() => DeleteItems(data.id)} />
